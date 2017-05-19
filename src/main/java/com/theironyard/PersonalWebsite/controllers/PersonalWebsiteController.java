@@ -22,6 +22,11 @@ public class PersonalWebsiteController {
         return "index";
     }
 
+    @RequestMapping(path ="/blog-posts/{{id}}", method = RequestMethod.GET)
+    public String displayBlog(Model model){
+        return "post";
+    }
+
 
 
 }
