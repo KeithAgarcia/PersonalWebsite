@@ -1,6 +1,7 @@
 package com.theironyard.PersonalWebsite.entities;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by Keith on 5/18/17.
@@ -21,8 +22,8 @@ public class JobExperience {
     @Column(nullable = false)
     String date;
 
-    @Column(nullable = false)
-    String description;
+    @OneToMany
+    List<Description> descriptions;
 
 
     public int getId() {
@@ -57,11 +58,11 @@ public class JobExperience {
         this.date = date;
     }
 
-    public String getDescription() {
-        return description;
+    public List<Description> getDescriptions() {
+        return descriptions;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDescriptions(List<Description> descriptions) {
+        this.descriptions = descriptions;
     }
 }
