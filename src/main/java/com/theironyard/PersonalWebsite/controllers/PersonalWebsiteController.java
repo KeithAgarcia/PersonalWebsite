@@ -1,5 +1,6 @@
 package com.theironyard.PersonalWebsite.controllers;
 
+import com.theironyard.PersonalWebsite.repositories.PersonalWebsiteRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,10 +11,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 public class PersonalWebsiteController {
-    PersonalWebsiteController personalWebsiteController;
+    PersonalWebsiteRepository personalWebsiteRepository;
 
-    public PersonalWebsiteController(PersonalWebsiteController personalWebsiteController) {
-        this.personalWebsiteController = personalWebsiteController;
+    public PersonalWebsiteController(PersonalWebsiteRepository personalWebsiteRepository) {
+        this.personalWebsiteRepository = personalWebsiteRepository;
     }
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
