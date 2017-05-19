@@ -13,9 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class PersonalWebsiteController {
     PersonalWebsiteRepository personalWebsiteRepository;
 
-    public PersonalWebsiteController(PersonalWebsiteRepository personalWebsiteRepository) {
-        this.personalWebsiteRepository = personalWebsiteRepository;
-    }
+
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
     public String homePage(Model model) {
@@ -23,9 +21,9 @@ public class PersonalWebsiteController {
         return "index";
     }
 
-    @RequestMapping(path ="/blog-posts/{{id}}", method = RequestMethod.GET)
-    public String displayBlog(Model model){
-        return "post";
+    @RequestMapping(path ="/job-experience/1", method = RequestMethod.GET)
+    public String displayJobExperience(Model model){
+        return "job-experience";
     }
 
 
