@@ -33,7 +33,7 @@ public class PersonalWebsiteController {
 
     @RequestMapping(path ="/contact", method = RequestMethod.GET)
     public String displayContact(Model model){
-        return "contat";
+        return "contact";
     }
 
 
