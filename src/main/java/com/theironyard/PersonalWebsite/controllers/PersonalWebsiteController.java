@@ -26,6 +26,17 @@ public class PersonalWebsiteController {
         return "job-experience";
     }
 
+    @RequestMapping(path ="/about-me", method = RequestMethod.GET)
+    public String displayAboutMe(Model model){
+        return "about-me";
+    }
+
+    @RequestMapping(path ="/contact", method = RequestMethod.GET)
+    public String displayContact(Model model){
+        return "contat";
+    }
+
+
 
 
 }
