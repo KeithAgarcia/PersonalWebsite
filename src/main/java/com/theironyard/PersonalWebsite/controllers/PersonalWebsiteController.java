@@ -24,13 +24,21 @@ public class PersonalWebsiteController {
     }
 
     @PostConstruct
-    public void init(){
+    public void init(){ //delete from <table_name>
         if(jobExperiences.count() == 0){
             JobExperience jobExperience = new JobExperience();
             jobExperience.setCompanyName("Alston & Bird");
             jobExperience.setJobTitle("Application Support");
             jobExperience.setDate("Nov 2015 - Feb 2017");
             jobExperience.setDescription("Work on Applications");
+            jobExperiences.save(jobExperience);
+
+            jobExperience = new JobExperience();
+            jobExperience.setCompanyName("Worldwide Tech Services");
+            jobExperience.setJobTitle("Field Engineer");
+            jobExperience.setDate("Nov 2013 - Nov 2015");
+            jobExperience.setDescription("Hardware support" +  //one to many job descreiptions
+                    "Mobile support");
             jobExperiences.save(jobExperience);
 
         }
