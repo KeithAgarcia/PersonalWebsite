@@ -10,10 +10,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 public class PersonalWebsiteController {
+    PersonalWebsiteController personalWebsiteController;
+
+    public PersonalWebsiteController(PersonalWebsiteController personalWebsiteController) {
+        this.personalWebsiteController = personalWebsiteController;
+    }
+
     @RequestMapping(path = "/", method = RequestMethod.GET)
     public String homePage(Model model) {
 
         return "index";
     }
+
+
 
 }
