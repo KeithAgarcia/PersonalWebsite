@@ -41,7 +41,8 @@ public class PersonalWebsiteController {
 
             // add our new descriptions to that list
             jobDuties.add(new Description("Work on Applications"));
-            jobDuties.add(new Description("Do some other stuff"));
+            jobDuties.add(new Description("Multimedia support"));
+            jobDuties.add(new Description("Hardware Support"));
 
             // save the descriptions to your repository
             // this must happen before you can assign these objects
@@ -61,8 +62,17 @@ public class PersonalWebsiteController {
             jobExperience.setCompanyName("Worldwide Tech Services");
             jobExperience.setJobTitle("Field Engineer");
             jobExperience.setDate("Nov 2013 - Nov 2015");
-            jobExperiences.save(jobExperience);
 
+            List<Description> jobDuties1 = new ArrayList<>();
+
+            jobDuties1.add(new Description("Hardware Support"));
+            jobDuties1.add(new Description("Repaired Servers"));
+            jobDuties1.add(new Description("Repaired tablets"));
+
+            descriptions.save(jobDuties1);
+            jobExperience.setDescriptions(jobDuties1);
+//
+              jobExperiences.save(jobExperience);
         }
     }
 
